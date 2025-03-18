@@ -1,0 +1,10 @@
+.about {
+    min-height: 500px;
+    background-color: #efefef;
+    padding-top: 4rem;
+}
+
+.about h2 {
+    text-align: center;
+    color: darkcyan;
+}

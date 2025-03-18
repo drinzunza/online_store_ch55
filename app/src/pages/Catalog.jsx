@@ -3,36 +3,108 @@ import "./Catalog.css";
 
 const mockData = [
     {
-        "title": "Strawberry",
-        "price": 18.92,
+        "title": "Orange",
         "category": "Fruit",
-        "image": "/images/skdjf.png",
-        "_id": "1234332"
+        "price": 15.9,
+        "image": "/images/oranges.png",
+        "_id": "1"
     },
     {
-        "title": "Apple",
-        "price": 11.42,
+        "title": "Banana",
         "category": "Fruit",
-        "image": "/images/apple.png",
-        "_id": "xnasdgfo3"
+        "price": 17.012,
+        "image": "/images/banana.png",
+        "_id": "2"
     },
+    {
+        "title": "Chesse",
+        "category": "Dairy and Eggs",
+        "price": 33.3,
+        "image": "/images/chesse.png",
+        "_id": "3"
+    },
+    {
+        "title": "Coffee",
+        "category": "Beverages",
+        "price": 73.12,
+        "image": "/images/coffee.png",
+        "_id": "4"
+    },
+    {
+        "title": "Hoodie",
+        "category": "Merchandise",
+        "price": 41.92,
+        "image": "/images/hoodie.png",
+        "_id": "5"
+    },
+    {
+        "title": "Milk",
+        "category": "Dairy and Eggs",
+        "price": 11.2,
+        "image": "/images/milk.png",
+        "_id": "6"
+    },
+    {
+        "title": "Vitamins",
+        "category": "Merchandise",
+        "price": 43.76,
+        "image": "/images/vitamins.png",
+        "_id": "7"
+    },
+    {
+        "title": "Granada Juice",
+        "category": "Beverages",
+        "price": 23.36,
+        "image": "/images/product-22.jpg",
+        "_id": "8"
+    },
+    {
+        "title": "Tomatos",
+        "category": "Vegetable",
+        "price": 12.46,
+        "image": "https://www.melissas.com/cdn/shop/files/image-of-organic-tomatoes-fruit-34547171950636_600x601.jpg?v=1691078328",
+        "_id": "asdas"
+    }
 ];
 
+const mockCategories = [ "Fruit", "Vegetable", "Dairy & Eggs", "Beverages", "Merchandise" ];
 
 function Catalog() {
     return (
         <div className="catalog">
             <h1>Check out amazing catalog!</h1>
 
-            <div className="list">
-                <Product></Product>
-                <Product></Product>
-                <Product></Product>
-                <Product></Product>
-                <Product></Product>
+            <div className="filters">
+                {mockCategories.map( cat => <button className='btn btn-sm btn-outline-success'>{cat}</button> )}
+            </div>
+            
+            <div className="list">            
+                {mockData.map( item => <Product key={item._id} data={item}></Product> )}
             </div>
         </div>
     );
 }
 
 export default Catalog;
+
+
+
+
+
+/**
+ * 
+ * Create the About page
+ * shoud have:
+ * h2 -> your name
+ * h5 -> you email
+ * button -> <some text>
+ * 
+ * Render the About page below Catalog on app.jsx
+ * 
+ * when you click the button
+ * call a showData function
+ * 
+ * showData function should console log a message 
+ * 
+ * 
+ */

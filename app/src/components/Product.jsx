@@ -1,7 +1,7 @@
 import "./Product.css";
 import QuantityPicker from './QuantityPicker';
 
-function Product() {
+function Product(props) {
 
     function add() {
         console.log("Adding prod");
@@ -9,15 +9,32 @@ function Product() {
 
     return (
         <div className="product">
-            <h5>Title Here</h5>
+
+            <img src={props.data.image} alt=""></img>
+
+            <h5>{props.data.title}</h5>
+
+            <div className="prices">
+                <label className='unit'>Total</label>
+                <label className='unit'>Unit Price</label>
+            </div>
+
+            <div className="prices">
+                <label className='total'>${props.data.price}</label>
+                <label className='unit'>${props.data.price}</label>
+            </div>
 
 
-            <QuantityPicker />
 
-            <button className='btn btn-sm btn-success' onClick={add}>
-                <i className="fa-solid fa-cart-plus"></i>
-                Add
-            </button>
+
+            <div className="controls">
+                <QuantityPicker />
+
+                <button className='btn btn-sm btn-success' onClick={add}>
+                    <i className="fa-solid fa-cart-plus"></i>
+                    Add
+                </button>
+            </div>
         </div>
     );
 }
