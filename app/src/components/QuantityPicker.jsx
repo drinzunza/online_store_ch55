@@ -1,19 +1,21 @@
 import { useState } from 'react';
 import "./QuantityPicker.css";
 
-function QuantityPicker() {
+function QuantityPicker(props) {
     const [quantity, setQuantity] = useState(1);
 
     function increase() {
         let val = quantity + 1;
         setQuantity(val);
+        props.onChange(val);
     }
 
     function decrease() {
-        if(quantity == 1) return;        
+        if(quantity == 1) return;
 
         let val = quantity - 1;
         setQuantity(val);
+        props.onChange(val);
     }    
 
     return (
@@ -31,8 +33,11 @@ export default QuantityPicker;
 
 
 /**
- * On Product
- * create an Add  button
- * when clicked, call an add fn
- * the fn should console log any message
+create an Admin page
+
+- h1 
+- two sections
+
+
+render Admin on app.jsx below Contact
  */

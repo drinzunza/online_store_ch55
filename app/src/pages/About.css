@@ -1,5 +1,4 @@
 .about {
-    min-height: 500px;
     background-color: #efefef;
     padding-top: 4rem;
 }
@@ -7,4 +6,15 @@
 .about h2 {
     text-align: center;
     color: darkcyan;
+}
+
+.about .homer {
+    height: 250px;
+    border-radius: 50%;
+    border:1px solid #cfd2d5;
+    margin-bottom: 12px;
+}
+
+.about button {
+    margin-top: 12px;
 }

@@ -39,3 +39,8 @@
 .read-the-docs {
   color: #888;
 }
+
+
+.page {
+  min-height:calc(100vh - 120px);
+}

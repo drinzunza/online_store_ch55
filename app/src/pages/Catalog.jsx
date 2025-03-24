@@ -40,21 +40,21 @@ const mockData = [
     {
         "title": "Milk",
         "category": "Dairy and Eggs",
-        "price": 11.2,
+        "price": 11.122,
         "image": "/images/milk.png",
         "_id": "6"
     },
     {
         "title": "Vitamins",
         "category": "Merchandise",
-        "price": 43.76,
+        "price": 43.99,
         "image": "/images/vitamins.png",
         "_id": "7"
     },
     {
         "title": "Granada Juice",
         "category": "Beverages",
-        "price": 23.36,
+        "price": 23.873847,
         "image": "/images/product-22.jpg",
         "_id": "8"
     },
@@ -71,7 +71,7 @@ const mockCategories = [ "Fruit", "Vegetable", "Dairy & Eggs", "Beverages", "Mer
 
 function Catalog() {
     return (
-        <div className="catalog">
+        <div className="catalog page">
             <h1>Check out amazing catalog!</h1>
 
             <div className="filters">
@@ -89,22 +89,3 @@ export default Catalog;
 
 
 
-
-
-/**
- * 
- * Create the About page
- * shoud have:
- * h2 -> your name
- * h5 -> you email
- * button -> <some text>
- * 
- * Render the About page below Catalog on app.jsx
- * 
- * when you click the button
- * call a showData function
- * 
- * showData function should console log a message 
- * 
- * 
- */
